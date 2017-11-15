@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\flok\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\flok\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  webapplication4:
+    image: webapplication4:dev
+    build:
+      args:
+        source: obj/Docker/empty/
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\Users\flok\Documents\Visual Studio 2017\Projects\WebApplication4\WebApplication4:/app
+      - C:\Users\flok\vsdbg:/remote_debugger:ro
+      - C:\Users\flok\.nuget\packages\:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  bin/Debug/netcoreapp1.1/WebApplication4.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""

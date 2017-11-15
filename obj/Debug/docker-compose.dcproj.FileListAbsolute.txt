@@ -1,0 +1,1 @@
+C:\Users\flok\Documents\Visual Studio 2017\Projects\WebApplication4\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

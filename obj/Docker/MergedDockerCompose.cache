@@ -1,0 +1,11 @@
+services:
+  webapplication4:
+    build:
+      context: C:\Users\flok\Documents\Visual Studio 2017\Projects\WebApplication4\WebApplication4
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapplication4
+    ports:
+    - 80/tcp
+version: '2.0'
